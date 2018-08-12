@@ -1,2 +1,1 @@
-
-alert('js was loaded');
+alert("js loaded");
