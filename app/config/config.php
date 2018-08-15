@@ -10,5 +10,5 @@
  
     define('URLROOT','http://localhost/posta');
  
-    define('SITENAME','posta');
+    define('SITENAME','Posta');
 ?>
