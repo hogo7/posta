@@ -45,7 +45,7 @@ public function query($sql){
 
     $this->stmt = $this->dbh->prepare($sql);
 }
-
+// this gonna bind :stuf with variable value cool ha ?
 public function bind($param ,$value,$type =null){
 
     if(is_null($type)){
