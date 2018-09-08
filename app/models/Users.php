@@ -22,13 +22,13 @@ class Users{
 
     public function login($email,$password){
         $this->db->query("SELECT * FROM `user` WHERE `U_email`=:email");
-        $this->db->bind(":email",$email);
+        $this->db->bind(":email", $email);
         $row=$this->db->single();
        
         $hashed_password=$row->U_password;
         if(password_verify($password,$hashed_password)){
             return $row;
-        }else {
+        } else {
             return false;
         }
     }
@@ -43,6 +43,15 @@ class Users{
                 return true;
             }else return false;
     }
+
+
+    public function getUserById($id){
+        $this->db->query("SELECT * FROM user WHERE U_id=:id");
+        $this->db->bind(":id",$id);
+        $row=$this->db->single();
+     
+        return $row;
+}
 
 
 

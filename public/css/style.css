@@ -6,3 +6,27 @@ sup{
  color: red;
            
 }
+#demo-editor-bootstrap{
+    color: dimgray;
+    text-emphasis-color: dimgray;
+
+
+
+}
+.loader{
+    width: 50%;
+
+
+}
+.loader img {
+    width: 50%;
+    float: right;
+    margin-right: 25%;
+}
+
+.del-btn{
+
+    float: right;
+
+
+}

@@ -2,7 +2,7 @@
 session_start();
 //flash massage
 // flash (register success , 'you are registered', )
-function flash($name='',$message='',$class='alert alert-success',$type="Suceess"){
+function flash($name='',$message='',$class='alert alert-success',$type="Suceess",$icon="fa-check-square-o"){
     if(!empty($name)){
       // پیام رو ست میکند 
         if(!empty($message)&& empty($_SESSION[$name])){
@@ -18,7 +18,7 @@ function flash($name='',$message='',$class='alert alert-success',$type="Suceess"
            $_SESSION[$name]=$message;
            $_SESSION[$name.'_class']=$class; 
            $_SESSION[$name."_type"]=$type;
-       
+            $_SESSION[$name.'_icon']=$icon;
          }//پیام رو نمایش میدهد  
          elseif(empty($message)&& !empty($_SESSION[$name])){
             $class=!empty($_SESSION[$name.'_class'])?$_SESSION[$name.'_class']:'';
@@ -33,4 +33,10 @@ function flash($name='',$message='',$class='alert alert-success',$type="Suceess"
 
 }
 
+function logedInUser(){
+    if (isset($_SESSION['U_id'])){
+        return true;
+    }else return false;
+    # code...
+}
 ?>

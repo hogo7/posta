@@ -6,11 +6,14 @@
         }
      public function index(){
         
-        
+        if(logedInUser()){
+            redirect("posts");
+        }
         $data=[
             
-            'title'=>'POST@',
-            
+            'title'=>'Posta',
+            'description'=>"pls register or login "
+    
     
                 ];
         

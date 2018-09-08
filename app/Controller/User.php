@@ -117,7 +117,7 @@
             if($this->userModel->FindUserByEmail($data['email'])&& $this->userModel->login($data['email'],$data['password'])){
               $this->creatUserSession($logedInUser);
              // print_r ($logedInUser);
-              flash('login_success',"welcome on boerd",'alert alert-success','Loged in');
+              flash('login_success',"welcome on boerd",'alert alert-success','Logged in');
              }else{
                 
                  flash('login_err',"email or password is wrong ","alert alert-danger","ERROR");
@@ -138,6 +138,13 @@
         
     else{
             //load form
+
+
+
+
+
+
+            
             $data=[
                 "name"=>'',
                 "password"=>'',
@@ -151,7 +158,7 @@
         $_SESSION['U_id']=$user->U_id;
         $_SESSION['U_email']=$user->U_email;
         $_SESSION['U_password']=$user->U_password;
-        redirect('pages/index');
+        redirect('posts/index');
     }
     public function logout(){
         unset($_SESSION['U_id']);

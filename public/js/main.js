@@ -7,5 +7,7 @@ $(document).ready(function(){
     window.setTimeout(function() {
         $(".alert").fadeTo(2000,0).slideUp(1000, function(){
             $(this).remove();});},3000);
+           
+     $("#demo-editor-bootstrap").Editor(); 
 });
 

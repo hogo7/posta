@@ -17,9 +17,11 @@
 
      <ul class="navbar-nav ml-auto ">
       <?php if(isset($_SESSION['U_id'])) : ?>
-        <?php flash('login_success')?>  
+        <?php flash('login_success');
+              flash("post_message") ; ?>  
         <li class="nav-item btn  ">
               <a class="nav-link" href="<?php echo URLROOT;?>/user/logout">Logout</a>
+              
             </li>
       <?php else: ?>
             <li class="nav-item btn  ">
